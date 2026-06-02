@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<SplitPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.mycompany.languagesapp.MainController">
+
+    <VBox>
+     <TextField fx:id="textWord" promptText="Type your new word"/>
+        <Button onAction="#onAddWord">Add New Word</Button>
+        <ListView fx:id="wordList"/>
+    </VBox>
+    <VBox>
+        <Label>Conversation</Label>
+        <TextArea fx:id="chatArea" editable="false" VBox.vgrow="ALWAYS"/>
+        <HBox><TextField fx:id="messageField" HBox.hgrow="ALWAYS" promptText="Type something..."></TextField>
+            <Button onAction="#onSendMessage" text="SEND"></Button> </HBox>
+
+    </VBox>
+    </SplitPane>
+
+
